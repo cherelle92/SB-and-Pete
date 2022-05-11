@@ -1,5 +1,5 @@
 require 'pg'
-require './app/models/mood.rb'
+require './app/models/mood'
 
 describe '.all' do
   it "returns list of moods" do
