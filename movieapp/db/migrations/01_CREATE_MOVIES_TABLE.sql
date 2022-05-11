@@ -1,0 +1,1 @@
+CREATE TABLE movies (id SERIAL PRIMARY KEY, title VARCHAR(150));
