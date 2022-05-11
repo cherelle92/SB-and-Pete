@@ -20,7 +20,7 @@ class Mood
     end
   end
 
-  def self.create(mood_title:) #added colon here... incase
+  def self.create(mood_title)
     if ENV['RACK_ENV'] == 'test'
       connection = PG.connect dbname: 'movie_app_test'
     else      
@@ -31,13 +31,13 @@ class Mood
     Mood.new(id: mood[0]['id'], mood: mood[0]['mood'])
   end
 
-  # def self.delete(mood:)
-  #   if ENV['RACK_ENV'] == 'test'
-  #     connection = PG.connect dbname: 'movie_app_test'
-  #   else      
-  #     connection = PG.connect dbname: 'movie_app'
-  #   end
+  def self.delete(mood_title)
+    if ENV['RACK_ENV'] == 'test'
+      connection = PG.connect dbname: 'movie_app_test'
+    else      
+      connection = PG.connect dbname: 'movie_app'
+    end
 
-  #   mood = connection.exec_params "DELETE FROM moods WHERE mood = '#{mood}'"
-  # end
+    mood = connection.exec_params "DELETE FROM moods WHERE mood = '#{mood_title}'"
+  end
 end
