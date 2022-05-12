@@ -69,7 +69,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-  gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
+  gem 'rspec-rails', ">= 3.9.0"
 end
 
 gem "pg"
