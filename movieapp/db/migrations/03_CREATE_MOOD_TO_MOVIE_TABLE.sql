@@ -1,0 +1,1 @@
+CREATE TABLE link_mood_to_movie (movie_id INT NOT NULL, mood_id INT NOT NULL, PRIMARY KEY (movie_id, mood_id), FOREIGN KEY (mood_id) REFERENCES moods (id), FOREIGN KEY (movie_id) REFERENCES movies (id));
