@@ -38,6 +38,6 @@ class Movie
       connection = PG.connect dbname: 'movie_app'
     end
 
-    movie = connection.exec_params "DELETE FROM movies WHERE title = '#{title}'"
+    movie = connection.exec_params "DELETE FROM movies WHERE title = ($1);", [title]
   end
 end
