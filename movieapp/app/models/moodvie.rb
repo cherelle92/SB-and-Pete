@@ -19,4 +19,14 @@ class Moodvie
     Moodvie.new(movie_id: moodvie[0]['movie_id'], mood_id: moodvie[0]['mood_id'])
   end
 
+  def self.filter(mood_id)
+    if ENV['RACK_ENV'] == 'test'
+      connection = PG.connect dbname: 'movie_app_test'
+    else      
+      connection = PG.connect dbname: 'movie_app'
+    end
+
+    movies = connection.exec_params "SELECT movie_id FROM link_mood_to_movie WHERE mood_id = '#{mood_id}'"
+  end
+
 end
