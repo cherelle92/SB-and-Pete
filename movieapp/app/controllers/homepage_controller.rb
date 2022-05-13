@@ -3,6 +3,6 @@ class HomepageController < ApplicationController
   end
 
   def select
-    redirect_to "/recommendations/select"
+    @user_select = params[:moods]
   end
 end
