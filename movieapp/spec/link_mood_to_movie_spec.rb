@@ -54,3 +54,29 @@ describe '.filter_by_movie_id' do
 
   end
 end
+
+describe '.all' do
+  it "returns list of mood id and movie id" do
+    movie_entry = Movie.create(title: 'Little Miss Sunshine')
+    mood_entry = Mood.create('Feel-good')
+    movie_entry_2 = Movie.create(title: 'The Princess Bride')
+    mood_entry_2 = Mood.create('Nostalgia')
+    moodvie = Moodvie.create(movie: movie_entry, mood: mood_entry)
+    moodvie_2 = Moodvie.create(movie: movie_entry_2, mood: mood_entry_2)
+    moodvies = Moodvie.all
+    expect(moodvies.length).to eq 2
+    expect(moodvies.first.mood_id).to eq mood_entry.id
+    expect(moodvies.first.movie_id).to eq movie_entry.id
+    expect(moodvies.first).to be_a Moodvie
+  end
+end
+
+describe '.delete' do
+  it "deletes the record" do
+    movie_entry = Movie.create(title: 'Little Miss Sunshine')
+    mood_entry_1 = Mood.create('Feel-good')
+    moodvie_1 = Moodvie.create(movie: movie_entry, mood: mood_entry_1)
+    Moodvie.delete(movie: movie_entry, mood: mood_entry_1)
+    expect(Moodvie.all).not_to include moodvie_1
+  end
+end

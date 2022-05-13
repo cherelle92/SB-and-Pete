@@ -39,4 +39,25 @@ class Moodvie
     moods = connection.exec_params "SELECT mood_id FROM link_mood_to_movie WHERE movie_id = '#{movie_id}'"
   end
 
+  def self.all
+    if ENV['RACK_ENV'] == 'test'
+      connection = PG.connect dbname: 'movie_app_test'
+    else      
+      connection = PG.connect dbname: 'movie_app'
+    end  
+    moodvies = connection.exec 'SELECT * FROM link_mood_to_movie;' 
+    moodvies.map do |moodvie| 
+      Moodvie.new(movie_id: moodvie['movie_id'], mood_id: moodvie['mood_id'])
+    end
+  end
+
+  def self.delete(movie:, mood:)
+    if ENV['RACK_ENV'] == 'test'
+      connection = PG.connect dbname: 'movie_app_test'
+    else      
+      connection = PG.connect dbname: 'movie_app'
+    end
+    moodvies = connection.exec_params "DELETE FROM link_mood_to_movie WHERE movie_id = '#{movie.id}' AND mood_id = '#{mood.id}'";
+
+  end
 end
