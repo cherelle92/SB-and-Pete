@@ -36,8 +36,8 @@ end
 
 describe '.delete' do
   it "can delete a movie record from the database" do
-    movie = Movie.create(title: 'Schindler''s List')
-    # Movie.delete(title: 'Schindler''s List')
-    # expect(Movie.all).not_to include movie.title
+    movie = Movie.create(title: "Schindler's List")
+    Movie.delete(title: "Schindler's List")
+    expect(Movie.all).not_to include movie
   end
 end
