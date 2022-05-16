@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  get 'homepage/index'
+  devise_for :users
+  # get 'homepage/index'
+  root 'homepage#index'
   post 'homepage/select'
   get 'recommendations/select'
+  delete '/homepage/index' => 'devise/sessions#destroy'
+  
 
   # resources :recommendations
 
