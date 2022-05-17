@@ -24,10 +24,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_16_113827) do
     t.index ["movie_id"], name: "index_moods_movies_on_movie_id"
   end
 
+  create_table "moodvies", force: :cascade do |t|
+    t.string "movie"
+    t.string "mood"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "movies", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "description"
   end
 
 end
