@@ -10,11 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_12_150806) do
+
+ActiveRecord::Schema[7.0].define(version: 2022_05_16_113023) do
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+  
+  create_table "moods", force: :cascade do |t|
+    t.string "mood"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "moods_movies", id: false, force: :cascade do |t|
+    t.integer "movie_id", null: false
+    t.integer "mood_id", null: false
+    t.index ["mood_id"], name: "index_moods_movies_on_mood_id"
+    t.index ["movie_id"], name: "index_moods_movies_on_movie_id"
+  end
+  
   create_table "movies", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "description"
+
   end
 
 end
