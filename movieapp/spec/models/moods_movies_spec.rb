@@ -5,7 +5,7 @@ require 'rails_helper'
 # end
 
 RSpec.describe MoodsMovies, type: :model do
-  mood_entry = Mood.create(mood: "Chill" )
+  mood_entry = Mood.create(mood: "Tearjerker" )
   movie_entry = Movie.create(title: 'My Girl')
   
   moodvie = MoodsMovies.create(movie_id: movie_entry.id, mood_id: mood_entry.id) 
