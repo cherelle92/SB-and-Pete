@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   root 'homepage#index'
   post 'homepage/select'
   get 'recommendations/select'
-  delete '/homepage/index' => 'devise/sessions#destroy'
+
+  devise_scope :user do
+    get 'users/sign_out', to: 'devise/sessions#destroy'
+  end
   
 
   # resources :recommendations
