@@ -16,10 +16,25 @@ RSpec.describe Mood, type: :model do
   end
 end 
 
-# RSpec.describe Mood, type: :model do
-#   moods { Mood.create(mood: "Chill" ), Mood.create('Dramatic'), Mood.create('Escapism')}
-#   subject = Mood.all
-#   it "returns list of moods" do
-#     expect(subject.length).to eq 3
-#   end
-# end
+RSpec.describe Mood, type: :model do
+  it "returns list of moods" do
+    Mood.create(mood: "Chill" )
+    Mood.create(mood: 'Dramatic')
+    Mood.create(mood: 'Escapism')
+    moods = Mood.all
+    
+    expect(moods.length).to eq 3
+    expect(moods.first).to be_a Mood
+    expect(moods.first.id).to eq 1
+    expect(moods.first.mood).to eq 'Chill'
+  end
+end
+
+RSpec.describe Mood, type: :model do
+  it "can destroy a mood" do
+    mood = Mood.create(mood: "Inspirational" )
+    Mood.destroy_all
+    
+    expect(Mood.all).not_to include mood.mood
+  end
+end
