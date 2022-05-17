@@ -1,4 +1,4 @@
 class Movie < ActiveRecord::Base
   has_and_belongs_to_many :moods
-  validates :movie, presence: true
+  validates :title, presence: true
 end
