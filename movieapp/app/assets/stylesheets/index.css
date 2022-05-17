@@ -1,0 +1,39 @@
+/* colour scheme #92a8d1 #034f84 #f7cac9 #f7786b */
+
+.homepage-title {
+  text-align: center;
+  font-size: 40px;
+  color: #f7786b;
+}
+
+body {
+  text-align: center;
+  background-color: #034f84;
+}
+
+.opening-question {
+  color: #92a8d1;
+  font-size: 35px;
+}
+
+.select-mood-box {  
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.select-mood {
+  line-height: 20px;
+  font-size: 14px;
+  display: block;
+  height: 20px;
+}
+.select-mood:hover {
+  font-size: 20px;
+}
+
+.submit-mood {
+
+}
+
+/* .grow { transition: all .2s ease-in-out; }
+  .grow:hover { transform: scale(1.1); } */
