@@ -22,7 +22,7 @@ RSpec.describe Mood, type: :model do
     Mood.create(mood: 'Dramatic')
     Mood.create(mood: 'Escapism')
     moods = Mood.all
-
+    binding.irb
     expect(moods.length).to eq 3
     expect(moods.first).to be_a Mood
     expect(moods.first.id).to eq mood.id
