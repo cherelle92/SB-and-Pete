@@ -18,14 +18,14 @@ end
 
 RSpec.describe Mood, type: :model do
   it "returns list of moods" do
-    Mood.create(mood: "Chill" )
+    mood = Mood.create(mood: "Chill" )
     Mood.create(mood: 'Dramatic')
     Mood.create(mood: 'Escapism')
     moods = Mood.all
-    
+
     expect(moods.length).to eq 3
     expect(moods.first).to be_a Mood
-    expect(moods.first.id).to eq 1
+    expect(moods.first.id).to eq mood.id
     expect(moods.first.mood).to eq 'Chill'
   end
 end

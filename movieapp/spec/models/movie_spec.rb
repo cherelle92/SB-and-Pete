@@ -18,14 +18,14 @@ end
 
 RSpec.describe Movie, type: :model do
   it "returns list of movie titles" do
-    Movie.create(title: 'Coco')
+    movie = Movie.create(title: 'Coco')
     Movie.create(title: 'My Girl')
     Movie.create(title: "Schindler's List")
     movies = Movie.all
     
     expect(movies.length).to eq 3
     expect(movies.first).to be_a Movie
-    expect(movies.first.id).to eq 1
+    expect(movies.first.id).to eq movie.id
     expect(movies.first.title).to eq 'Coco'
   end
 end
