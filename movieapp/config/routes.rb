@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
-  get 'homepage/index'
+  devise_for :users
+  # get 'homepage/index'
+  root 'homepage#index'
   post 'homepage/select'
   get 'recommendations/select'
+
+  devise_scope :user do
+    get 'users/sign_out', to: 'devise/sessions#destroy'
+  end
+  
 
   # resources :recommendations
 
