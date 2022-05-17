@@ -1,187 +1,175 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+# # This file should contain all the record creation needed to seed the database with its default values.
+# # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
+# #
+# # Examples:
+# #
+# #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
+# #   Character.create(name: "Luke", movie: movies.first)
 
-
-# Adding Films to the Database
+# # Adding Films to the Database
 Movie.destroy_all
-Movie.create!([{
-    title: 'My Girl'
-},
-{
-    title: 'Coco'
-}
-])
-p "Created #{Movie.count} movies"
-# coco = Movie.create(title: 'Coco')
-# schindler = Movie.create(title: "Schindler's List")
-# little_miss_sunshine = Movie.create(title: 'Little Miss Sunshine')
-# legally_blonde = Movie.create(title: 'Legally Blonde')
-# the_princess_bride = Movie.create(title: 'The Princess Bride')
-# arrival = Movie.create(title: 'Arrival')
-# night_crawler = Movie.create(title: 'Night Crawler')
-# butterfly_effect = Movie.create(title: 'The Butterfly Effect')
-# inception = Movie.create(title: 'Inception')
-# lovebirds = Movie.create(title: 'Lovebirds')
-# pretty_woman = Movie.create(title: 'Pretty Woman')
-# footloose = Movie.create(title: 'Footloose')
-# breakfast_club = Movie.create(title: 'The Breakfast Club')
-# dangerous_liaisons = Movie.create(title: 'Dangerous Liaisons')
-# seventeen_again = Movie.create(title: '17 Again')
-# thor_ragnarok = Movie.create(title: 'Thor Ragnarok')
-# twenty_eight_days_later = Movie.create(title: '28 Days Later')
-# saw = Movie.create(title: 'Saw')
-# la_la_land = Movie.create(title: 'La La Land')
-# love_actually = Movie.create(title: 'Love Actually')
-# ready_player_one = Movie.create(title: 'Ready Player One')
-# lotr_1 = Movie.create(title: 'The Lord of the Rings: The Fellowship of the Ring')
-# star_wars_empire_strikes_back = Movie.create(title: 'Star Wars: Episode V - The Empire Strikes Back')
-# fight_club = Movie.create(title: 'Fight Club')
-# warrior = Movie.create(title: 'Warrior')
-# silence_of_lambs = Movie.create(title: 'The Silence of the Lambs')
-# bloodsport = Movie.create(title: 'Bloodsport')
-# easy_a = Movie.create(title: 'Easy A')
-# pitch_perfect = Movie.create(title: 'Pitch Perfect')
-# the_proposal = Movie.create(title: 'The Proposal')
-# shiva_baby = Movie.create(title: 'Shiva Baby')
-# princess_switch = Movie.create(title: 'The Princess Switch')
-# elf = Movie.create(title: 'Elf')
-# the_holiday = Movie.create(title: 'The Holiday')
-# the_boy_wind = Movie.create(title: 'The Boy Who Harnessed the Wind')
-# wadjda = Movie.create(title: 'Wadjda')
-# bubble = Movie.create(title: 'Bubble')
 
+my_girl = Movie.create(title: 'My Girl')
+coco = Movie.create(title: 'Coco')
+schindler = Movie.create(title: "Schindler's List")
+little_miss_sunshine = Movie.create(title: 'Little Miss Sunshine')
+legally_blonde = Movie.create(title: 'Legally Blonde')
+the_princess_bride = Movie.create(title: 'The Princess Bride')
+arrival = Movie.create(title: 'Arrival')
+night_crawler = Movie.create(title: 'Night Crawler')
+butterfly_effect = Movie.create(title: 'The Butterfly Effect')
+inception = Movie.create(title: 'Inception')
+lovebirds = Movie.create(title: 'Lovebirds')
+pretty_woman = Movie.create(title: 'Pretty Woman')
+footloose = Movie.create(title: 'Footloose')
+breakfast_club = Movie.create(title: 'The Breakfast Club')
+dangerous_liaisons = Movie.create(title: 'Dangerous Liaisons')
+seventeen_again = Movie.create(title: '17 Again')
+thor_ragnarok = Movie.create(title: 'Thor Ragnarok')
+twenty_eight_days_later = Movie.create(title: '28 Days Later')
+saw = Movie.create(title: 'Saw')
+la_la_land = Movie.create(title: 'La La Land')
+love_actually = Movie.create(title: 'Love Actually')
+ready_player_one = Movie.create(title: 'Ready Player One')
+lotr_1 = Movie.create(title: 'The Lord of the Rings: The Fellowship of the Ring')
+star_wars_empire_strikes_back = Movie.create(title: 'Star Wars: Episode V - The Empire Strikes Back')
+fight_club = Movie.create(title: 'Fight Club')
+warrior = Movie.create(title: 'Warrior')
+silence_of_lambs = Movie.create(title: 'The Silence of the Lambs')
+bloodsport = Movie.create(title: 'Bloodsport')
+easy_a = Movie.create(title: 'Easy A')
+pitch_perfect = Movie.create(title: 'Pitch Perfect')
+the_proposal = Movie.create(title: 'The Proposal')
+shiva_baby = Movie.create(title: 'Shiva Baby')
+princess_switch = Movie.create(title: 'The Princess Switch')
+elf = Movie.create(title: 'Elf')
+the_holiday = Movie.create(title: 'The Holiday')
+the_boy_wind = Movie.create(title: 'The Boy Who Harnessed the Wind')
+wadjda = Movie.create(title: 'Wadjda')
+bubble = Movie.create(title: 'Bubble')
+
+p "Created #{Movie.count} movies"
 
 # # Adding moods to the database
+
 Mood.destroy_all
-Mood.create!([{
-    mood: 'Tearjeaker'
-},
-{
-    mood: 'Feel Good'
-}
-])
+
+tearjerker = Mood.create(mood:'Tearjerker')
+feel_good = Mood.create(mood:'Feel Good')
+thought_provoking = Mood.create(mood:'Thought-provoking')
+funny = Mood.create(mood:'Funny')
+inspirational = Mood.create(mood:'Inspirational')
+chill = Mood.create(mood:'Chill')
+nostalgic = Mood.create(mood:'Nostalgic')
+fight_or_flight = Mood.create(mood:'Fight or Flight')
+scream_and_jump = Mood.create(mood:'Scream and Jump')
+holding_hands = Mood.create(mood:'Holding Hands')
+mind_blowing = Mood.create(mood:'Mind-blowing')
+dramatic = Mood.create(mood:'Dramatic')
+escapism = Mood.create(mood:'Escapism')
+plotless = Mood.create(mood:'Plotless')
+
 p "Created #{Mood.count} mood"
-# tearjerker = Mood.create('Tearjerker')
-# feel_good = Mood.create('Feel Good')
-# thought_provoking = Mood.create('Thought-provoking')
-# funny = Mood.create('Funny')
-# inspirational = Mood.create('Inspirational')
-# chill = Mood.create('Chill')
-# nostalgic = Mood.create('Nostalgic')
-# fight_or_flight = Mood.create('Fight or Flight')
-# scream_and_jump = Mood.create('Scream and Jump')
-# holding_hands = Mood.create('Holding Hands')
-# mind_blowing = Mood.create('Mind-blowing')
-# dramatic = Mood.create('Dramatic')
-# escapism = Mood.create('Escapism')
-# plotless = Mood.create('Plotless')
 
+# Adding values to database using Moodvie
+my_girl_mood_1 = MoodsMovies.create(movie_id: my_girl.id, mood_id: tearjerker.id )
+my_girl_mood_2 = MoodsMovies.create(movie_id: my_girl.id, mood_id: nostalgic.id )
+coco_mood_1 = MoodsMovies.create(movie_id: coco.id, mood_id: tearjerker.id)
+coco_mood_2 = MoodsMovies.create(movie_id: coco.id, mood_id: escapism.id)
+schindler_moodvie = MoodsMovies.create(movie_id: schindler.id, mood_id: tearjerker.id)
 
-# # Adding values to database using Moodvie
-# my_girl_moodvie_1 = Moodvie.create(movie: my_girl, mood: tearjerker)
-# my_girl_moodvie_2 = Moodvie.create(movie: my_girl, mood: nostalgic)
+little_miss_sunshine_mood_1 = MoodsMovies.create(movie_id: little_miss_sunshine.id, mood_id: feel_good.id)
+little_miss_sunshine_mood_2 = MoodsMovies.create(movie_id: little_miss_sunshine.id, mood_id: funny.id)
+little_miss_sunshine_mood_3 = MoodsMovies.create(movie_id: little_miss_sunshine.id, mood_id: dramatic.id)
 
-# coco_moodvie_1 = Moodvie.create(movie: coco, mood: tearjerker)
-# coco_moodvie_2 = Moodvie.create(movie: coco, mood: escapism)
+legally_blonde_mood_1 = MoodsMovies.create(movie_id: legally_blonde.id, mood_id: feel_good.id)
+legally_blonde_mood_2 = MoodsMovies.create(movie_id: legally_blonde.id, mood_id: funny.id)
+legally_blonde_mood_3 = MoodsMovies.create(movie_id: legally_blonde.id, mood_id: chill.id)
 
-# schindler_moodvie = Moodvie.create(movie: schindler, mood: tearjerker)
+princess_bride_mood_1 = MoodsMovies.create(movie_id: the_princess_bride.id, mood_id: feel_good.id)
+princess_bride_mood_2 = MoodsMovies.create(movie_id: the_princess_bride.id, mood_id: nostalgic.id)
 
-# little_miss_sunshine_moodvie_1 = Moodvie.create(movie: little_miss_sunshine, mood: feel_good)
-# little_miss_sunshine_moodvie_2 = Moodvie.create(movie: little_miss_sunshine, mood: funny)
-# little_miss_sunshine_moodvie_3 = Moodvie.create(movie: little_miss_sunshine, mood: dramatic)
+arrival_mood_1 = MoodsMovies.create(movie_id: arrival.id, mood_id: thought_provoking.id)
+arrival_mood_2 = MoodsMovies.create(movie_id: arrival.id, mood_id: escapism.id)
 
-# legally_blonde_moodvie_1 = Moodvie.create(movie: legally_blonde, mood: feel_good)
-# legally_blonde_moodvie_2 = Moodvie.create(movie: legally_blonde, mood: funny)
-# legally_blonde_moodvie_3 = Moodvie.create(movie: legally_blonde, mood: chill)
+night_crawler_mood_1 = MoodsMovies.create(movie_id: night_crawler.id, mood_id: thought_provoking.id)
+night_crawler_mood_2 = MoodsMovies.create(movie_id: night_crawler.id, mood_id: scream_and_jump.id)
 
-# princess_bride_moodvie_1 = Moodvie.create(movie: the_princess_bride, mood: feel_good)
-# princess_bride_moodvie_2 = Moodvie.create(movie: the_princess_bride, mood: nostalgic)
+butterfly_effect_mood_1 = MoodsMovies.create(movie_id: butterfly_effect.id, mood_id: thought_provoking.id)
+butterfly_effect_mood_2 = MoodsMovies.create(movie_id: butterfly_effect.id, mood_id: mind_blowing.id)
 
-# arrival_moodvie_1 = Moodvie.create(movie: arrival, mood: thought_provoking)
-# arrival_moodvie_2 = Moodvie.create(movie: arrival, mood: escapism)
+inception_mood = MoodsMovies.create(movie_id: inception.id, mood_id: mind_blowing.id)
 
-# night_crawler_moodvie_1 = Moodvie.create(movie: night_crawler, mood: thought_provoking)
-# night_crawler_moodvie_2 = Moodvie.create(movie: night_crawler, mood: scream_and_jump)
+lovebirds_mood_1 = MoodsMovies.create(movie_id: lovebirds.id, mood_id: funny.id)
+lovebirds_mood_2 = MoodsMovies.create(movie_id: lovebirds.id, mood_id: holding_hands.id)
 
-# butterfly_effect_moodvie_1 = Moodvie.create(movie: butterfly_effect, mood: thought_provoking)
-# butterfly_effect_moodvie_2 = Moodvie.create(movie: butterfly_effect, mood: mind_blowing)
+pretty_woman_mood_1 = MoodsMovies.create(movie_id: pretty_woman.id, mood_id: funny.id)
+pretty_woman_mood_2 = MoodsMovies.create(movie_id: pretty_woman.id, mood_id: nostalgic.id)
+pretty_woman_mood_3 = MoodsMovies.create(movie_id: pretty_woman.id, mood_id: holding_hands.id)
 
-# inception_moodvie = Moodvie.create(movie: inception, mood: mind_blowing)
+footloose_mood_1 = MoodsMovies.create(movie_id: footloose.id, mood_id: feel_good.id)
+footloose_mood_2 = MoodsMovies.create(movie_id: footloose.id, mood_id: nostalgic.id)
 
-# lovebirds_moodvie_1 = Moodvie.create(movie: lovebirds, mood: funny)
-# lovebirds_moodvie_2 = Moodvie.create(movie: lovebirds, mood: holding_hands)
+breakfast_club_mood_1 = MoodsMovies.create(movie_id: breakfast_club.id, mood_id: nostalgic.id)
+breakfast_club_mood_2 = MoodsMovies.create(movie_id: breakfast_club.id, mood_id: dramatic.id)
 
-# pretty_woman_moodvie_1 = Moodvie.create(movie: pretty_woman, mood: funny)
-# pretty_woman_moodvie_2 = Moodvie.create(movie: pretty_woman, mood: nostalgic)
-# pretty_woman_moodvie_3 = Moodvie.create(movie: pretty_woman, mood: holding_hands)
+dangerous_liaisons_mood = MoodsMovies.create(movie_id: dangerous_liaisons.id, mood_id: dramatic.id)
 
-# footloose_moodvie_1 = Moodvie.create(movie: footloose, mood: feel_good)
-# footloose_moodvie_2 = Moodvie.create(movie: footloose, mood: nostalgic)
+seventeen_again_mood = MoodsMovies.create(movie_id: seventeen_again.id, mood_id: funny.id)
 
-# breakfast_club_moodvie_1 = Moodvie.create(movie: breakfast_club, mood: nostalgic)
-# breakfast_club_moodvie_2 = Moodvie.create(movie: breakfast_club, mood: dramatic)
+thor_ragnarok_mood_1 = MoodsMovies.create(movie_id: thor_ragnarok.id, mood_id: funny.id)
+thor_ragnarok_mood_2 = MoodsMovies.create(movie_id: thor_ragnarok.id, mood_id: escapism.id)
 
-# dangerous_liaisons_moodvie = Moodvie.create(movie: dangerous_liaisons, mood: dramatic)
+twenty_eight_days_later_mood_1 = MoodsMovies.create(movie_id: twenty_eight_days_later.id, mood_id: thought_provoking.id)
+twenty_eight_days_later_mood_2 = MoodsMovies.create(movie_id: twenty_eight_days_later.id, mood_id: scream_and_jump.id)
 
-# seventeen_again_moodvie = Moodvie.create(movie: seventeen_again, mood: funny)
+saw_mood = MoodsMovies.create(movie_id: saw.id, mood_id: scream_and_jump.id)
 
-# thor_ragnarok_moodvie_1 = Moodvie.create(movie: thor_ragnarok, mood: funny)
-# thor_ragnarok_moodvie_2 = Moodvie.create(movie: thor_ragnarok, mood: escapism)
+la_la_land_mood = MoodsMovies.create(movie_id: la_la_land.id, mood_id: holding_hands.id)
+la_la_land_mood = MoodsMovies.create(movie_id: la_la_land.id, mood_id: feel_good.id)
 
-# twenty_eight_days_later_moodvie_1 = Moodvie.create(movie: twenty_eight_days_later, mood: thought_provoking)
-# twenty_eight_days_later_moodvie_2 = Moodvie.create(movie: twenty_eight_days_later, mood: scream_and_jump)
+love_actually_mood_1 = MoodsMovies.create(movie_id: love_actually.id, mood_id: feel_good.id)
+love_actually_mood_2 = MoodsMovies.create(movie_id: love_actually.id, mood_id: funny.id)
+love_actually_mood_3 = MoodsMovies.create(movie_id: love_actually.id, mood_id: holding_hands.id)
 
-# saw_moodvie = Moodvie.create(movie: saw, mood: scream_and_jump)
+ready_player_one_mood_1 = MoodsMovies.create(movie_id: ready_player_one.id, mood_id: feel_good.id)
+ready_player_one_mood_2 = MoodsMovies.create(movie_id: ready_player_one.id, mood_id: escapism.id)
 
-# la_la_land_moodvie = Moodvie.create(movie: la_la_land, mood: holding_hands)
+lotr_1_mood = MoodsMovies.create(movie_id: lotr_1, mood_id: escapism)
 
-# love_actually_moodvie_1 = Moodvie.create(movie: love_actually, mood: feel_good)
-# love_actually_moodvie_2 = Moodvie.create(movie: love_actually, mood: funny)
-# love_actually_moodvie_3 = Moodvie.create(movie: love_actually, mood: holding_hands)
+star_wars_empire_strikes_back_mood = MoodsMovies.create(movie_id: star_wars_empire_strikes_back, mood_id: escapism)
 
-# ready_player_one_moodvie_1 = Moodvie.create(movie: ready_player_one, mood: feel_good)
-# ready_player_one_moodvie_2 = Moodvie.create(movie: ready_player_one, mood: escapism)
+fight_club_mood_1 = MoodsMovies.create(movie_id: fight_club, mood_id: nostalgic)
+fight_club_mood_2 = MoodsMovies.create(movie_id: fight_club, mood_id: fight_or_flight)
+fight_club_mood_3 = MoodsMovies.create(movie_id: fight_club, mood_id: dramatic)
 
-# lotr_1_moodvie = Moodvie.create(movie: lotr_1, mood: escapism)
+warrior_moodvie_1 = MoodsMovies.create(movie_id: warrior, mood_id: fight_or_flight)
+warrior_moodvie_2 = MoodsMovies.create(movie_id: warrior, mood_id: dramatic)
 
-# star_wars_empire_strikes_back_moodvie = Moodvie.create(movie: star_wars_empire_strikes_back, mood: escapism)
+silence_of_lambs_mood = MoodsMovies.create(movie_id: silence_of_lambs, mood_id: scream_and_jump)
 
-# fight_club_moodvie_1 = Moodvie.create(movie: fight_club, mood: nostalgic)
-# fight_club_moodvie_2 = Moodvie.create(movie: fight_club, mood: fight_or_flight)
-# fight_club_moodvie_3 = Moodvie.create(movie: fight_club, mood: dramatic)
+bloodsport_mood_1 = MoodsMovies.create(movie_id: bloodsport, mood_id: fight_or_flight)
+bloodsport_mood_2 = MoodsMovies.create(movie_id: bloodsport, mood_id: dramatic)
 
-# warrior_moodvie_1 = Moodvie.create(movie: warrior, mood: fight_or_flight)
-# warrior_moodvie_2 = Moodvie.create(movie: warrior, mood: dramatic)
+easy_a_mood_1 = MoodsMovies.create(movie_id: easy_a, mood_id: funny)
+easy_a_mood_2 = MoodsMovies.create(movie_id: easy_a, mood_id: chill)
+easy_a_mood_3 = MoodsMovies.create(movie_id: easy_a, mood_id: holding_hands)
+easy_a_mood_4 = MoodsMovies.create(movie_id: easy_a, mood_id: dramatic)
 
-# silence_of_lambs_moodvie = Moodvie.create(movie: silence_of_lambs, mood: scream_and_jump)
+# pitch_perfect_moodvie_1 = Moodvie.create(movie_id: pitch_perfect, mood_id: funny)
+# pitch_perfect_moodvie_2 = Moodvie.create(movie_id: pitch_perfect, mood_id: chill)
+# pitch_perfect_moodvie_3 = Moodvie.create(movie_id: pitch_perfect, mood_id: holding_hands)
 
-# bloodsport_moodvie_1 = Moodvie.create(movie: bloodsport, mood: fight_or_flight)
-# bloodsport_moodvie_2 = Moodvie.create(movie: bloodsport, mood: dramatic)
+# the_proposal_moodvie_1 = Moodvie.create(movie_id: the_proposal, mood_id: funny)
+# the_proposal_moodvie_2 = Moodvie.create(movie_id: the_proposal, mood_id: chill)
+# the_proposal_moodvie_3 = Moodvie.create(movie_id: the_proposal, mood_id: holding_hands)
 
-# easy_a_moodvie_1 = Moodvie.create(movie: easy_a, mood: funny)
-# easy_a_moodvie_2 = Moodvie.create(movie: easy_a, mood: chill)
-# easy_a_moodvie_3 = Moodvie.create(movie: easy_a, mood: holding_hands)
-# easy_a_moodvie_4 = Moodvie.create(movie: easy_a, mood: dramatic)
+# shiva_baby_moodvie_1 = Moodvie.create(movie_id: shiva_baby, mood_id: thought_provoking)
+# shiva_baby_moodvie_2 = Moodvie.create(movie_id: shiva_baby, mood_id: funny)
+# shiva_baby_moodvie_3 = Moodvie.create(movie_id: shiva_baby, mood_id: inspirational)
+# shiva_baby_moodvie_4 = Moodvie.create(movie_id: shiva_baby, mood_id: dramatic)
 
-# pitch_perfect_moodvie_1 = Moodvie.create(movie: pitch_perfect, mood: funny)
-# pitch_perfect_moodvie_2 = Moodvie.create(movie: pitch_perfect, mood: chill)
-# pitch_perfect_moodvie_3 = Moodvie.create(movie: pitch_perfect, mood: holding_hands)
-
-# the_proposal_moodvie_1 = Moodvie.create(movie: the_proposal, mood: funny)
-# the_proposal_moodvie_2 = Moodvie.create(movie: the_proposal, mood: chill)
-# the_proposal_moodvie_3 = Moodvie.create(movie: the_proposal, mood: holding_hands)
-
-# shiva_baby_moodvie_1 = Moodvie.create(movie: shiva_baby, mood: thought_provoking)
-# shiva_baby_moodvie_2 = Moodvie.create(movie: shiva_baby, mood: funny)
-# shiva_baby_moodvie_3 = Moodvie.create(movie: shiva_baby, mood: inspirational)
-# shiva_baby_moodvie_4 = Moodvie.create(movie: shiva_baby, mood: dramatic)
-
-# princess_switch_moodvie = Moodvie.create(movie: princess_switch, mood: plotless)
+# princess_switch_moodvie = Moodvie.create(movie_id: princess_switch, mood_id: plotless)
 
 # elf_moodvie_1 = Moodvie.create(movie: elf, mood: plotless)
 # elf_moodvie_2 = Moodvie.create(movie: elf, mood: funny)
@@ -201,3 +189,4 @@ p "Created #{Mood.count} mood"
 # bubble_moodvie_1 = Moodvie.create(movie: bubble, mood: chill)
 # bubble_moodvie_2 = Moodvie.create(movie: bubble, mood: mind_blowing)
 # bubble_moodvie_3 = Moodvie.create(movie: bubble, mood: escapism)
+p "Created #{MoodsMovies.count} match"
