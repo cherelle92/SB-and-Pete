@@ -4,5 +4,6 @@ class HomepageController < ApplicationController
 
   def select
     @user_select = params[:moods]
+    @moods = Mood.all
   end
 end
