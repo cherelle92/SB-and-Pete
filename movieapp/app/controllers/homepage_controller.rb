@@ -1,9 +1,10 @@
 class HomepageController < ApplicationController
   def index
+    @moods = Mood.all
   end
 
   def select
-    @user_select = params[:moods]
-    @moods = Mood.all
+    @mood_id = params[:id]
+    @mood = params[:mood]
   end
 end

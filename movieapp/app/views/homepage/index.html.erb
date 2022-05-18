@@ -3,10 +3,19 @@
 
 <h1>Movie Mood app</h1>
 
+<div>
+<h3>?What are you in the mood for</h3>
+    <form action="/homepage/select" method="post">
+      <% @moods.each do |m| %>
+        <input type="hidden" name="id" value="<%=m.id%>">
+        <input type="hidden" name="mood" value="<%=m.mood%>">
+        <input type="radio" id="mood" name="mood_id" value="mood">
+        <label for="mood"> <%=m.mood%> </label>
+        <br>
+      <% end %>
+      <input type="submit" value="Pick">
+     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    </form>
+</div>
 
-
-<%= form_with url: "/homepage/select", method: :post do |form| %>
-<%= form.label :user_mood, "What are you in the mood for?" %>
-<%= form.select :moods, [["tearjerker", "Tearjerker"], ["feelgood", "Feel good"], ["thought-provoking", "Thought-provoking"], ["funny", "Funny"], ["inspirational", "Inspirational"], ["chill", "Chill"], ["nostalgic", "Nostalgic"], ["scream&jump", "Scream & Jump"], ["holding-hands", "Holding-hands"], ["dramatic", "Dramatic"], ["escapism", "Escapism"], ["plotless", "Plotless"], ["fightorflight", "Fight or Flight"]]  %>
-<%= form.submit "Pick" %>
-<% end %>
+ 
