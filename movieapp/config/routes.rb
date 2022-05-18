@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root 'homepage#index'
   post 'homepage/select'
   get 'recommendations/select'
+  get "movie/:id", to: "movie#show"
+  get "mood/:id", to: "mood#show"
 
   devise_scope :user do
     get 'users/sign_out', to: 'devise/sessions#destroy'

@@ -6,5 +6,5 @@
 <%= form_with url: "/homepage/select", method: :post do |form| %>
 <%= form.label :user_mood, "What are you in the mood for?" %>
 <%= form.select :moods, [["tearjerker", "Tearjerker"], ["feelgood", "Feel good"], ["thought-provoking", "Thought-provoking"], ["funny", "Funny"], ["inspirational", "Inspirational"], ["chill", "Chill"], ["nostalgic", "Nostalgic"], ["scream&jump", "Scream & Jump"], ["holding-hands", "Holding-hands"], ["dramatic", "Dramatic"], ["escapism", "Escapism"], ["plotless", "Plotless"], ["fightorflight", "Fight or Flight"]]  %>
-<%= form.submit "Pick!" %>
+<%= form.submit "Pick" %>
 <% end %>
