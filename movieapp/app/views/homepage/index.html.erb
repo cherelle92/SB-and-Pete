@@ -4,13 +4,12 @@
 <h1>Movie Mood app</h1>
 
 <div>
-<h3>?What are you in the mood for</h3>
+<h3>What are you in the mood for?</h3>
     <form action="/homepage/select" method="post">
       <% @moods.each do |m| %>
-        <input type="hidden" name="id" value="<%=m.id%>">
-        <input type="hidden" name="mood" value="<%=m.mood%>">
-        <input type="radio" id="mood" name="mood_id" value="mood">
-        <label for="mood"> <%=m.mood%> </label>
+				<input type="radio" id="<%=m.mood%>" name="mood_id" value="<%=m.id%>">
+        <label for="<%=m.mood%>"> <%=m.mood%> </label>
+				
         <br>
       <% end %>
       <input type="submit" value="Pick">
