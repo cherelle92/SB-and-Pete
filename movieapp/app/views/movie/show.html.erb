@@ -1,4 +1,18 @@
-<h1><%= @movie.id %></h1>
-<h2><%= @movie.title  %></h2>
+<body class="movie_show">
+<div class="text-box">
+<div class="display-movie-info">
+  <div class="movie-id">
+<p hidden><%= @movie.id %></p>
+  </div>
+  <div class="movie-title">
+<h2 class="title"><%= @movie.title  %></h2>
+  </div>
+  <div class="movie-description">
 <h2><%= @movie.description  %></h2> 
+  </div>
+  <div class="movie-image">
 <h2><img src="<%= @movie.image  %>"></h2> 
+  </div>
+</div>
+</div>
+</body>
