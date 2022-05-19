@@ -6,24 +6,31 @@
 <body class="homepage-body">
 <div class="text-box">
 <div class="inline">
-<%#<h1>Homepage#index</h1> 
-<p>Find me in app/views/homepage/index.html.erb</p> %>
-<h1 class="homepage-title" >In The Mood</h1>
-  </div>
-<%= form_with url: "/homepage/select", method: :post do |form| %>
-  <div class="opening-question">
-<%= form.label :user_mood, "What's on your mind?" %>
-  </div>
-  <div class="select-mood-box">
-    <div class="select-mood">
-<%= form.select :moods, [["Tearjerker", "Tearjerker"], ["Feel good", "Feel good"], ["Thought-provoking", "Thought-provoking"], ["Funny", "Funny"], ["Inspirational", "Inspirational"], ["Chill", "Chill"], ["Nostalgic", "Nostalgic"], ["Scream & Jump", "Scream & Jump"], ["Holding-hands", "Holding-hands"], ["Dramatic", "Dramatic"], ["Escapism", "Escapism"], ["Plotless", "Plotless"], ["Fight or Flight", "Fight or Flight"]]  %>
+
+ <div>
+  <h1 class="homepage-title" >In The Mood</h1>
+ </div>
+ 
+ <div class="opening-question">
+   <h3>What are you in the mood for?</h3>
+ </div>
+ 
+ <div>
+  <form action="/homepage/select" method="post">
+    <% @moods.each do |m| %>
+      <input type="radio" id="<%=m.mood%>" name="mood_id" value="<%=m.id%>">
+      <label for="<%=m.mood%>"> <%=m.mood%> </label>
+      <br>
+    <% end %>
+    <div class="submit-mood">
+      <input type="submit" value="Pick">
     </div>
-  </div>
-  <div class="submit-mood">
-<%= form.submit "Pick" %>
-  </div>
-<% end %>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  </form>
+ </div>
+  
 </div>
 </div>
 </body>
 </html>
+
