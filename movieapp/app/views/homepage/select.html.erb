@@ -2,6 +2,7 @@
   <div>
     <h1>Here are the movie recommendations if you're in the mood for: <%= @mood.mood %></h1>
   </div>
+
 	<br>
 	<br>
 
@@ -15,6 +16,10 @@
 		<div class="movie-image" align="center">
 			<p><img src="<%= m.image  %>" width="300" height="400"></p>
 		</div>
-		
+    <div>
+		<form action="/movie/<%=m.id%>">
+      <input type="submit" value="Know more"/>
+    </form>
+    </div>
 		<% end %>
 </div>
