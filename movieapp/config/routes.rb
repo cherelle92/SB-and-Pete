@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "movie/:id", to: "movie#show"
   get "mood/:id", to: "mood#show"
 
+
   devise_scope :user do
     get 'users/sign_out', to: 'devise/sessions#destroy'
   end
