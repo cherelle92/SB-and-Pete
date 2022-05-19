@@ -1,11 +1,16 @@
-<h1>here are the movie recommendations</h1>
-<p><%= @mood_id %></p>
-<p><%= @mood.mood %></p>
+<h1>Here are the movie recommendations for <%= @mood.mood %></h1>
+<div>
 <p><% @movies_list.each do |m| %></p>
-		<p><%= m.title %></p>	
-		<p><%= m.description %></p>	
-		<p><%= m.image %></p>	
+	<div style="width: 300px; float: left;">
+		<p><img src="<%= m.image  %>"></p> 
+	</div>
+		<h3><%= m.title %></h3>	
+		<h4><%= m.description %></h4>	
+	</div>
 <% end %>
+</div>
+
+
  
 
 
