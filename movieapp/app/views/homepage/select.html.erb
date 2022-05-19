@@ -1,11 +1,17 @@
-<h1>here are the movie recommendations</h1>
-<p><%= @mood_id %></p>
-<p><%= @mood.mood %></p>
-<p><% @movies_list.each do |m| %></p>
-		<p><%= m.title %></p>	
-		<p><%= m.description %></p>	
-		<p><%= m.image %></p>	
-<% end %>
- 
+<div class="select_page">
+  <div>
+    <h1>Here are the movie recommendations if you're in the mood for: @mood.mood </h1>
+  </div>
 
-
+  <div class="recommended-mood">
+    <% @movies_list.each do |m| %>
+      <div>
+		    <p><%= m.title %></p>
+      </div>
+      <div>
+		    <img src="<%= m.image %>" >
+      </div>
+      <!--  button to indiviual movie page    -->
+    <% end %>
+  </div>
+</div>
