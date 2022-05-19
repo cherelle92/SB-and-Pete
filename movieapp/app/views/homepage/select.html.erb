@@ -1,6 +1,10 @@
-<h1>here are the movie recommendations</h1>
+<body class="select_page">
+<h1>Here are the movie recommendations:</h1>
  <p><%= @user_select %></p>
-
+<div class="recommended-mood">
  <% @moods.each do |m| %>
  <p><%= m.mood %>
  <% end %>
+ </div>
+ </body>
+
