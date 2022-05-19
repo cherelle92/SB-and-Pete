@@ -7,8 +7,10 @@
 	    <div style="width: 300px; float: left;">
 		    <p><img src="<%= m.image  %>"></p> 
 	    </div>
-		<h3><%= m.title %></h3>	
-		<h4><%= m.description %></h4>	
+		<h3><%= m.title %> </h3>	
+    <form action="/movie/<%=m.id%>">
+    <input type="submit" value="Know more"/>
+    </form>
 	</div>
 <% end %>
 </div>
