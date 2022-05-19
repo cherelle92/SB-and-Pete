@@ -1,6 +1,11 @@
 <h1>here are the movie recommendations</h1>
- <p><%= @user_select %></p>
+<p><%= @mood_id %></p>
+<p><%= @mood.mood %></p>
+<p><% @movies_list.each do |m| %></p>
+		<p><%= m.title %></p>	
+		<p><%= m.description %></p>	
+		<p><%= m.image %></p>	
+<% end %>
+ 
 
- <% @moods.each do |m| %>
- <p><%= m.mood %>
- <% end %>
+
