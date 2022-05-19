@@ -1,6 +1,8 @@
 <div class="select_page">
-  <div>
-    <h1>Here are the movie recommendations if you're in the mood for: <%= @mood.mood %></h1>
+  <div align="center">
+    <h2>Here are the movie recommendations if you're in the mood for:
+    <br>
+     <%= @mood.mood %></h2>
   </div>
 
 	<br>
@@ -16,7 +18,7 @@
 		<div class="movie-image" align="center">
 			<p><img src="<%= m.image  %>" width="300" height="400"></p>
 		</div>
-    <div>
+    <div class="know-more" style="text-align: center;">
 		<form action="/movie/<%=m.id%>">
       <input type="submit" value="Know more"/>
     </form>

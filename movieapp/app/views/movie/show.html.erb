@@ -4,19 +4,20 @@
   <div class="movie-id">
 <p hidden><%= @movie.id %></p>
   </div>
-  <div class="movie-title">
-<h2 class="title"><%= @movie.title  %></h2>
+  <div class="movie-title" align="center">
+<h2 class="title" ><%= @movie.title  %></h2>
   </div>
-  <div class="movie-description">
-<h2><%= @movie.description  %></h2> 
+  <div class="movie-date-and-duration" align="center">
+<p>(<%= @movie.date  %> - <%= @movie.duration  %>)</p>
   </div>
-  <div class="movie-image">
-<h2><img src="<%= @movie.image  %>"></h2> 
+  <div class="movie-description" align="center">
+<h4><%= @movie.description  %></h4> 
   </div>
-  <div class="movie-link">
-    
-  <a href="<%= @movie.url %>">Where to watch it</a>
-
+  <div class="movie-image" align="center">
+<h2><img src="<%= @movie.image  %>" width="300" height="400"></h2> 
+  </div>
+  <div class="movie-link" align="center">
+  <h4><a href="<%= @movie.url %>" >Where to watch it</a></h4>
   </div>
 </div>
 </div>
