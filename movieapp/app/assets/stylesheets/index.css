@@ -1,38 +1,147 @@
 /* colour scheme #92a8d1 #034f84 #f7cac9 #f7786b */
+/*background-image: url(https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/5PNlDRM/videoblocks-back-view-of-people-watching-movie-in-the-cinema-defocused-screen-with-film-lightening-viewers-in-dark-hall_h_zjljf1l_thumbnail-1080_01.png);
+background-size: cover;
+background-attachment: fixed;
+background-repeat: no-repeat;*/
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville);
+@import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap);
 
 .homepage-title {
   text-align: center;
-  font-size: 40px;
-  color: #f7786b;
+  font-size: 300px;
+  color: #F7786B;
+  text-shadow: 4px 4px 4px #aaa;
+  font-family: 'Bebas Neue', cursive;
+  font-variant: small-caps;
+  font-weight: bold;
+}
+.text-box{
+  width: 90%;
+  position: absolute;
+  top: 12em;
+  left: 50%;
+  transform: translate(-50%, -5em);
+  text-align: center;
+  background-color: rgba(247, 251, 246, 0.2);
+  color: #fff;
+  overflow: auto;
+  border-radius: 25px;
 }
 
 body {
+  width: 100%;
   text-align: center;
-  background-color: #034f84;
+  position: relative;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.homepage-body {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  flex-direction: column;
+  background-image: url(https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/5PNlDRM/videoblocks-back-view-of-people-watching-movie-in-the-cinema-defocused-screen-with-film-lightening-viewers-in-dark-hall_h_zjljf1l_thumbnail-1080_01.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.select_page {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  flex-direction: column;
+  background-image: url(https://miro.medium.com/max/1200/1*x421_tforHmawarGmCuRNg.jpeg);
+  background-size: cover;
+  color: #fcfafa;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 30px;
+}
+
+.recommended-mood {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  flex-direction: column;
+}
+
+.movie_show {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  flex-direction: column;
+  background-image: url(https://mixkit.imgix.net/videos/preview/mixkit-friends-watching-a-film-in-a-dark-room-14936-0.jpg?q=80&auto=format%2Ccompress);
+  background-size: cover;
+  color: #fcfafa;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .opening-question {
   color: #92a8d1;
-  font-size: 35px;
+  font-size: 100px;
+  font-family: 'Odibee Sans';
 }
 
 .select-mood-box {  
   padding-top: 15px;
   padding-bottom: 15px;
+
 }
 
 .select-mood {
   line-height: 20px;
-  font-size: 14px;
+  font-size: 30px;
   display: block;
-  height: 20px;
-}
-.select-mood:hover {
-  font-size: 20px;
+  height: 40px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .submit-mood {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.display-movie-info{
 
+}
+
+.movie-title{
+  font-family: 'Libre Baskerville', serif;
+  font-variant: small-caps;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+.title{
+  font-size: 80px;
+}
+
+.movie-description{
+  padding-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.movie-image{
+
+}
+
+.movie-reommendations-page {
+  
+}
+
+.movie-recommendations-page-title {
+  font-size: 40px;
+  font-family: 'Odibee Sans';
+}
+
+.movie-recommendations-list {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
 }
 
 /* .grow { transition: all .2s ease-in-out; }

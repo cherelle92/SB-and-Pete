@@ -1,10 +1,36 @@
-<%# <h1>Homepage#index</h1>
-<p>Find me in app/views/homepage/index.html.erb</p> %>
+<!DOCTYPE html>
+<html>
+<head> 
+<link rel="stylesheet" href="index.css">
+</head>
+<body class="homepage-body">
+<div class="text-box">
+<div class="inline">
 
-<h1>Movie Mood app</h1>
+ <div>
+  <h1 class="homepage-title" >In The Mood</h1>
+ </div>
+ 
+ <div class="opening-question">
+   <h3>What are you in the mood for?</h3>
+ </div>
+ 
+ <div>
+  <form action="/homepage/select" method="post">
+    <% @moods.each do |m| %>
+      <input type="radio" id="<%=m.mood%>" name="mood_id" value="<%=m.id%>">
+      <label for="<%=m.mood%>"> <%=m.mood%> </label>
+      <br>
+    <% end %>
+    <div class="submit-mood">
+      <input type="submit" value="Pick">
+    </div>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  </form>
+ </div>
+  
+</div>
+</div>
+</body>
+</html>
 
-<%= form_with url: "/homepage/select", method: :post do |form| %>
-<%= form.label :user_mood, "What are you in the mood for?" %>
-<%= form.select :moods, [["tearjerker", "Tearjerker"], ["feelgood", "Feel good"], ["thought-provoking", "Thought-provoking"], ["funny", "Funny"], ["inspirational", "Inspirational"], ["chill", "Chill"], ["nostalgic", "Nostalgic"], ["scream&jump", "Scream & Jump"], ["holding-hands", "Holding-hands"], ["dramatic", "Dramatic"], ["escapism", "Escapism"], ["plotless", "Plotless"], ["fightorflight", "Fight or Flight"]]  %>
-<%= form.submit "Pick" %>
-<% end %>

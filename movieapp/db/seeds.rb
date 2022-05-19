@@ -48,6 +48,7 @@ the_boy_wind = Movie.create(title: 'The Boy Who Harnessed the Wind', description
 wadjda = Movie.create(title: 'Wadjda', description: "Wadjda is a 10-year-old girl living in a suburb of Riyadh, the capital of Saudi Arabia. Although she lives in a conservative world, Wadjda is fun loving, entrepreneurial and always pushing the boundaries of what she can get away with. After a fight with her friend Abdullah, a neighborhood boy she shouldn't be playing with, Wadjda sees a beautiful green bicycle for sale. She wants the bicycle desperately so that she can beat Abdullah in a race. But Wadjda's mother won't allow it, fearing repercussions from a society that sees bicycles as dangerous to a girl's virtue. So Wadjda decides to try and raise the money herself.", imagepath_id:'https://m.media-amazon.com/images/M/MV5BMjI4MzMyNzM2Ml5BMl5BanBnXkFtZTgwNDQ5MDgwMDE@._V1_.jpg')
 bubble = Movie.create(title: 'Bubble', description: "In an alternate world, bubbles raining down upon the world have broken the laws of gravity.  Hibiki, a reckless but talented ace, accidentally slips from the rooftops, but before plummeting into the gravity-bending sea below he is saved by Uta, a girl with mysterious powers.", imagepath_id:'https://upload.wikimedia.org/wikipedia/en/0/06/Bubble_film_poster.jpg')
 
+
 p "Created #{Movie.count} movies"
 
 # # Adding moods to the database
