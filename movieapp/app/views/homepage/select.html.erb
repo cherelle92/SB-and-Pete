@@ -2,16 +2,24 @@
   <div>
     <h1>Here are the movie recommendations if you're in the mood for: <%= @mood.mood %></h1>
   </div>
-  <div class="recommended-mood">
-    <% @movies_list.each do |m| %>
-	    <div style="width: 300px; float: left;">
-		    <p><img src="<%= m.image  %>"></p> 
-	    </div>
-		<h3><%= m.title %></h3>	
-		 <form action="/movie/<%=m.id%>">
 
-    <input type="submit" value="Know more"/>
+	<br>
+	<br>
+
+<div class="movie-container">
+		<% @movies_list.each do |m| %>
+		
+		<div class="movie-text" align="center">
+			<h3><%= m.title %></h3>
+		</div>
+		
+		<div class="movie-image" align="center">
+			<p><img src="<%= m.image  %>" width="300" height="400"></p>
+		</div>
+    <div>
+		<form action="/movie/<%=m.id%>">
+      <input type="submit" value="Know more"/>
     </form>
-	</div>
-<% end %>
+    </div>
+		<% end %>
 </div>

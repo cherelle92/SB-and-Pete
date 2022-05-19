@@ -144,5 +144,58 @@ body {
   font-size: 30px;
 }
 
+.movie-image-recommendation {
+  /* display: inline-block;
+  float: left;
+  vertical-align:top;
+
+/*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+  /* object-fit:scale-down; */
+}
+
+#movie-image-recommend {
+  width: 100px;
+  height: 100px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+.column {
+  vertical-align: middle;
+  margin-top: 5px;
+}
+
+.movie-container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.movie-image {
+  /* max-width: 100%;
+  flex-basis: 40%; */
+  /* width: 120px;
+  height: 120px;
+  height: auto;
+  float: left;
+  margin: 3px;
+  padding: 3px; */
+}
+
+.movie-text {
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+/* img {
+  max-width: 100%;
+  height: auto;
+} */
+
+
 /* .grow { transition: all .2s ease-in-out; }
   .grow:hover { transform: scale(1.1); } */
