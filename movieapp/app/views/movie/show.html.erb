@@ -2,22 +2,25 @@
 <div class="text-box">
 <div class="display-movie-info">
   <div class="movie-id">
-<p hidden><%= @movie.id %></p>
+    <p hidden><%= @movie.id %></p>
   </div>
-  <div class="movie-title" align="center">
-<h2 class="title" ><%= @movie.title  %></h2>
+  <center><div class="movie-image">
+    <img src="<%= @movie.image  %>" width="280" height="400">
+  </div>
+  <div class="movie-title">
+    <h2 class="title"><%= @movie.title  %></h2>
   </div>
   <div class="movie-date-and-duration" align="center">
-<p>(<%= @movie.date  %> - <%= @movie.duration  %>)</p>
+    <p>(<%= @movie.date  %> - <%= @movie.duration  %>)</p>
   </div>
-  <div class="movie-description" align="center">
-<h4><%= @movie.description  %></h4> 
+  <div class="movie-description">
+    <a style="font-size:20px"><%= @movie.description  %></a> 
   </div>
-  <div class="movie-image" align="center">
-<h2><img src="<%= @movie.image  %>" width="300" height="400"></h2> 
-  </div>
-  <div class="movie-link" align="center">
-  <h4><a href="<%= @movie.url %>" target="_blank" >Where to watch it</a></h4>
+</br>
+  <div class="movie-link">
+    <form action="<%= @movie.url %>">
+      <input type="submit" value="Where to watch it" />
+    </form>  </center>
   </div>
 </div>
 </div>
